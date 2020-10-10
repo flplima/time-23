@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
+    <script>
+      const socket = io('http://localhost:3001');
+      
+      socket.on('message', (data) => {
+        console.log(data.fromUser ? 'User:' : 'Bot:', data.text);
+      });
+
+      window.socket = socket;
+    </script>
+  </body>
+</html>
