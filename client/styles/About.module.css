@@ -8,6 +8,8 @@
 	min-height: 50vh;
 
 	padding: 2em;
+
+	color: var(--color-white);
 }
 
 .AboutContainer h1 {

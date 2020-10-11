@@ -5,7 +5,7 @@
 
 	padding: 2em;
 
-	min-height: 50vh;
+	color: var(--color-white);
 }
 
 .ContactUsContainer h1 {
@@ -15,6 +15,8 @@
 .ContactUsContainer span,
 .ContactUsContainer a {
 	font-size: 1.5em;
+
+	color: var(--color-white);
 
 	margin-top: 1em;
 }
