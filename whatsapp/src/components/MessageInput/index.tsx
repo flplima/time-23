@@ -10,6 +10,12 @@ interface props {
 }
 
 const Component: React.FC<props> = ({ handleChange, value, onClick }) => {
+	const onKeyDown = (e: any) => {
+		if (e.key === 'Enter') {
+			onClick?.();
+		}
+	}
+
 	return (
 		<div id="messageInput">
 			<MdInsertEmoticon />
@@ -18,6 +24,7 @@ const Component: React.FC<props> = ({ handleChange, value, onClick }) => {
 				type="text"
 				placeholder="Type a message"
 				onChange={handleChange}
+				onKeyDown={onKeyDown}
 				value={value}
 			/>
 			<MdSend onClick={onClick} />
