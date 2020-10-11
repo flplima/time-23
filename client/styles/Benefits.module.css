@@ -1,0 +1,32 @@
+.BenefitsContainer {
+	background-color: var(--color-white);
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 5em;
+
+	border-radius: 5em;
+
+	transition: .5s all;
+}
+
+.BenefitsContainer p,
+.BenefitsContainer h1 {
+	color: var(--color-black);
+
+}
+
+.BenefitsContainer:hover {
+	margin: 1em;
+}
+
+.BenefitsContainer h1 {
+	text-align: center;
+
+	margin-bottom: 2em;
+}
+
+.BenefitsContainer p {
+	font-size: 1.5em;
+}

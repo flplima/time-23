@@ -1,0 +1,79 @@
+#message {
+	width: 100%;
+
+	display: flex;
+
+	main {
+		margin: .3em 1em;
+
+		padding: .5em;
+
+		width: 50%;
+
+		border-radius: .5em;
+
+		background-color: var(--primary);
+
+		display: flex;
+		flex-direction: column;
+
+
+		position: relative;
+
+		>div {
+			color: var(--black);
+
+			display: flex;
+
+			span {
+				color: rgba(0,100,0,1);
+
+				margin-bottom: .5em;
+				font-size: .8em;
+
+				margin-right: .5em;
+			}
+		}
+
+		p {
+			color: var(--black);
+
+			display: flex;
+			justify-content: space-between;
+
+			span {
+				color: var(--gray);
+
+				font-size: .7em;
+
+				padding: 0 .5em;
+				padding-top: .5em;
+
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				
+				i {
+					position: relative;
+
+					align-items: center;
+					flex-direction: row;
+					display: flex;
+
+					font-size: 1.5em;
+
+					color: var(--blue);
+
+					svg:last-child {
+
+						position: absolute;
+						margin-left: .32em;
+					}
+
+				}
+			}
+		}
+
+	}
+
+}

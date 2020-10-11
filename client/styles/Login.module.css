@@ -1,0 +1,67 @@
+.LoginContainer {
+	background-color: var(--color-white);
+
+	padding: 2em;
+	margin: 2em;
+
+	border-radius: 5em;
+
+	display: flex;
+	flex-direction: column;
+
+	border-bottom: .1em solid var(--color-gray);
+}
+
+.LoginContainer h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.inputBlock input,
+.inputBlock label,
+.LoginContainer a,
+.LoginContainer span,
+.LoginContainer h1 {
+	color: var(--color-black);
+}
+
+.inputBlock {
+	padding: 0 3em;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.inputBlock label{
+	margin-bottom: .5em;
+	margin-top: 1em;
+}
+.inputBlock input {
+	padding: 1em;
+
+	background-color: var(--color-gray);
+
+	border: none;
+	border-radius: .5em;
+}
+
+.LoginContainer a,
+.LoginContainer span {
+	margin: auto;
+	margin-top: 1em;
+
+	padding: .5em;
+}
+
+.LoginContainer > a {
+	padding: .8em 2.8em;
+
+	font-weight: 700;
+
+	border-radius: .5em;
+
+	text-decoration: none;
+
+	color: var(--color-white);
+	background-color: var(--color-black);
+}

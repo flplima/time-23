@@ -1,0 +1,19 @@
+.AboutContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	text-align: center;
+
+	min-height: 50vh;
+
+	padding: 2em;
+}
+
+.AboutContainer h1 {
+	margin-bottom: 1.5em;
+}
+
+.AboutContainer p {
+	font-size: 1.5em;
+}
