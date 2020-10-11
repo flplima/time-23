@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
 import { CoreModule } from './core/core.module';
+import { ProductsModule } from './products/products.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -16,6 +18,8 @@ import { CoreModule } from './core/core.module';
       notKnowMessage: 'Não sei o que responder.',
       responseDelay: 1000,
     }),
+    ProductsModule,
+    UsersModule,
   ],
 })
 export class AppModule {}
