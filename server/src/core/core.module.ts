@@ -7,6 +7,7 @@ import { MessagesGateway } from './messages/messages.gateway';
 import { Message, MessageSchema } from './messages/message.schema';
 import { MessagesService } from './messages/messages.service';
 import { CORE_MODULE_OPTIONS } from './constants';
+import { ProductsModule } from 'src/products/products.module';
 
 export interface CoreModuleOptions {
   language: string;
@@ -22,6 +23,7 @@ export class CoreModule {
       module: CoreModule,
       imports: [
         MongooseModule.forFeature([{ name: Message.name, schema: MessageSchema }]),
+        ProductsModule,
       ],
       providers: [
         { provide: CORE_MODULE_OPTIONS, useValue: options },

@@ -9,6 +9,9 @@ export class Product extends Document {
   @Prop({ required: true })
   value: number;
 
+  @Prop([String])
+  synonyms: string[];
+
   @Prop({ type: Date, default: Date.now })
   createdAt: Date;
 }

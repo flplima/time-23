@@ -14,6 +14,7 @@ export interface NlpResult {
   entities: Array<{
     type?: string;
     subtype?: string;
+    option?: string;
     start: number;
     end: number;
     len: number;

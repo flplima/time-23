@@ -2,28 +2,25 @@ import { Body, Controller, Delete, Param, Post } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Product } from './product.schema';
+import { ProductsService } from './products.service';
 
 @Controller('products')
 export class ProductsController {
   constructor(
-    @InjectModel(Product.name) private productModel: Model<Product>,
+    private productsService: ProductsService,
   ) {}
 
   @Post()
-  async create(
+  create(
     @Body() data: any,
   ) {
-    const product = new this.productModel();
-    product.name = data.name;
-    product.value = data.value;
-    await product.save();
-    return product;
+    return this.productsService.create(data);
   }
 
   @Delete(':productId')
-  async remove(
+  remove(
     @Param('productId') productId: string,
   ) {
-    await this.productModel.remove({ _id: productId });
+    return this.productsService.remove(productId);
   }
 }
