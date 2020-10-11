@@ -6,9 +6,11 @@
 
 	min-height: 100vh;
 
-	padding: 2em 10em;
+	padding: 0 10em;
 
 	border-bottom: .1em solid var(--color-gray);
+
+	color: var(--color-white);
 }
 
 .LandingContainer > img {
@@ -38,6 +40,7 @@
 }
 .LandingContainer div a {
 	background-color: var(--color-black);
+	color: var(--color-white);
 
 	text-decoration: none;
 	font-size: 1.5em;
@@ -48,7 +51,7 @@
 	padding: .5em;
 	margin: 1em auto;
 
-	border-radius: .15em;
+	border-radius: 5em;
 
 	transition: .5s all;
 }

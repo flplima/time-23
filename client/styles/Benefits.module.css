@@ -11,14 +11,11 @@
 	transition: .5s all;
 }
 
-.BenefitsContainer p,
+.BenefitsContainer ul li,
+.BenefitsContainer ul li svg,
 .BenefitsContainer h1 {
-	color: var(--color-black);
+	color: var(--color-dark);
 
-}
-
-.BenefitsContainer:hover {
-	margin: 1em;
 }
 
 .BenefitsContainer h1 {
@@ -27,6 +24,46 @@
 	margin-bottom: 2em;
 }
 
-.BenefitsContainer p {
+.BenefitsContainer ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.BenefitsContainer ul li { 
+	list-style: none;
+
 	font-size: 1.5em;
+
+	background-color: rgba(0,0,0,.1);
+
+	font-size: 1em;
+
+	height: 4em;
+
+	margin: .5em;
+	padding: 1em 2em;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	border-radius: .5em;
+
+	font-weight: 700;
+
+	transition: .5s all;
+}
+.BenefitsContainer ul li div {
+	transition: .5s all;
+}
+.BenefitsContainer ul li div:hover {
+	margin-bottom: 1em;
+}
+
+.BenefitsContainer ul li svg {
+	font-size: 2em;
+
+	border-radius: .5em;
 }

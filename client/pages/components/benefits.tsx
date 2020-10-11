@@ -1,16 +1,70 @@
 import styles from "../../styles/Benefits.module.css";
+import {
+	MdPersonPinCircle,
+	MdInsertEmoticon,
+	MdHeadsetMic,
+	MdMonetizationOn,
+	MdModeComment,
+} from "react-icons/md";
+import { FaRobot } from "react-icons/fa";
 
 export default function landing() {
 	return (
-		<div id="benefits" className={styles.BenefitsContainer} >
+		<div id="benefits" className={styles.BenefitsContainer}>
 			<h1>
-				Porque adquirir nosso produto?<br/>
+				Porque adquirir nosso produto?
+				<br />
 				Veja alguns dos benefícios oferecidos:
 			</h1>
 
-			<p>- Oferecemos gráficos e relatórios de vendas, conforme o período desejado pelo usuário;</p>
-			<p>- Para a empresa, economia de gastos com colaboradores que, seriam encarregados para cumprirem essa função;</p>
-			<p>- Os pedidos serem entregues no conforto de seu domicílio, sem precisar sair de casa;</p>
+			<ul>
+				<li>
+					<div>
+						<MdMonetizationOn />
+						<br /> Economia de gastos com colaboradores
+					</div>
+				</li>					
+				
+				<li>
+					<div>
+						<MdPersonPinCircle />
+						<br />
+						Entrega no conforto de seu domicílio
+					</div>
+				</li>
+
+				<li>
+					<div>
+						<MdHeadsetMic />
+						<br />
+						Atendimento 24 horas
+					</div>
+				</li>
+
+				<li>
+					<div>
+						<MdModeComment />
+						<br />
+						Contato Digital e jornada de clientes
+					</div>
+				</li>
+
+				<li>
+					<div>
+						<MdInsertEmoticon />
+						<br />
+						Comunicação Efeciente
+					</div>
+				</li>
+
+				<li>
+					<div>
+						<FaRobot />
+						<br />
+						Soluções de chatbot(Getúlia)e inteliência artificial
+					</div>
+				</li>
+			</ul>
 		</div>
 	);
 }

@@ -10,7 +10,9 @@ import ContactUs from "./components/contactUs";
 export default function Home() {
 	return (
 		<div className={styles.container}>
+			
 			<title>Getúlia</title>
+			
 			<Header />
 			<Landing />
 			<About />
@@ -18,6 +20,7 @@ export default function Home() {
 			<ContactUs />
 
 			<Register />
+			
 		</div>
 	);
 }
