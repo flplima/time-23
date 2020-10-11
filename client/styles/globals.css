@@ -6,8 +6,6 @@
   outline: none;
 
 	font-family: 'Inter', sans-serif;
-
-	color: var(--color-white);
 }
 
 body {
@@ -21,6 +19,6 @@ body {
 	--color-primary: #d61D43;
 	--color-white: #fff;
 	--color-black: #000;
-	--color-green: #40B544;
+	--color-dark: #242424;
 	--color-gray: #e2d6d6;
 };
