@@ -31,6 +31,11 @@ export class CoreModule {
         MessagesService,
         MessagesGateway,
         CoreService,
+      ],
+      exports: [
+        CoreService,
+        NlpService,
+        MessagesService,
       ]
     }
   }

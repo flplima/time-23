@@ -1,26 +1,28 @@
 import { Body, Controller, Delete, Param, Post } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import { Product } from './product.schema';
+import { CoreService } from 'src/core/core.service';
 import { ProductsService } from './products.service';
 
 @Controller('products')
 export class ProductsController {
   constructor(
     private productsService: ProductsService,
+    private coreService: CoreService,
   ) {}
 
   @Post()
-  create(
+  async create(
     @Body() data: any,
   ) {
-    return this.productsService.create(data);
+    const product = await this.productsService.create(data);
+    this.coreService.train();
+    return product;
   }
 
   @Delete(':productId')
-  remove(
+  async remove(
     @Param('productId') productId: string,
   ) {
-    return this.productsService.remove(productId);
+    await this.productsService.remove(productId);
+    this.coreService.train();
   }
 }

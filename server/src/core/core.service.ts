@@ -12,7 +12,11 @@ export class CoreService implements OnApplicationBootstrap {
     @Inject(CORE_MODULE_OPTIONS) private coreModuleOptions: CoreModuleOptions,
   ) {}
 
-  async onApplicationBootstrap() {
+  onApplicationBootstrap() {
+    this.train();
+  }
+
+  async train() {
     const products = await this.productsService.find();
     for (const product of products) {
       this.nlpService.addNamedEntity('produto', product.name, product.synonyms);
