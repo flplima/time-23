@@ -1,4 +1,4 @@
-import { Module, DynamicModule } from '@nestjs/common';
+import { Module, DynamicModule, Global } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
 import { NlpService } from './nlp/nlp.service';
@@ -16,6 +16,7 @@ export interface CoreModuleOptions {
   responseDelay: number;
 }
 
+@Global()
 @Module({})
 export class CoreModule {
   static register(options: CoreModuleOptions): DynamicModule {
