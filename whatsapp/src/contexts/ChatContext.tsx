@@ -12,7 +12,29 @@ export const ChatContext = React.createContext<ChatContextType>(
 );
 
 export const ChatContextProvider: React.FC = ({ children }) => {
-  const [ messages, setMessages ] = useState<Message[]>([]);
+  const [ messages, setMessages ] = useState<Message[]>([
+    { _id: '0', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '1', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '2', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '3', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '4', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '5', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '6', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '7', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '8', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '9', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '10', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '11', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '12', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '13', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '14', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '15', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '16', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '17', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '18', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '19', text: 'test', fromUser: true, createdAt: new Date() },
+    { _id: '20', text: 'test', fromUser: true, createdAt: new Date() },
+  ]);
 
   const appendMessage = (message: Message) => {
     setMessages(state => [ ...state, message ]);
