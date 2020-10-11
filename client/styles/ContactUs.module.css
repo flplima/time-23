@@ -1,0 +1,20 @@
+.ContactUsContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 2em;
+
+	min-height: 50vh;
+}
+
+.ContactUsContainer h1 {
+	margin-bottom: 1.5em;
+}
+
+.ContactUsContainer span,
+.ContactUsContainer a {
+	font-size: 1.5em;
+
+	margin-top: 1em;
+}

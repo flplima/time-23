@@ -25,12 +25,12 @@
 
 ```sh
   # enter the folder
-  $ cd hackanton-front-demo/client
+  $ cd hackanton-front-demo/whatsapp
 
   # Install the dependencies
   $ yarn
 
   # Start the aplication
-  $ yarn dev
+  $ yarn start
 
 ```

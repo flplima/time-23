@@ -1,0 +1,47 @@
+div#messageInput {
+	width: 100%;
+
+	padding: 1em;
+	margin-top: 1em;
+
+	background-color: #f0f0f0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		color: var(--gray);
+
+		margin: 0 .25em;
+
+		font-size: 1.7em;
+
+		cursor: pointer;
+	}
+
+
+	#Attachment {
+		transform: rotate(130deg);
+	}
+
+	input {
+		background-color: var(--primary);
+
+		width: 90%;
+
+		color: var(--black);
+
+		padding: 1em;
+
+		border-radius: 1.5em;
+
+		border: none;
+	}
+	&:focus input {
+		outline: 0 none;
+		border: 0 none;
+		box-shadow: 0 0 0 0;
+	}
+
+}

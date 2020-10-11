@@ -1,0 +1,58 @@
+.LandingContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	min-height: 100vh;
+
+	padding: 2em 10em;
+
+	border-bottom: .1em solid var(--color-gray);
+}
+
+.LandingContainer > img {
+	width: 20em;
+	height: 30em;
+}
+
+.LandingContainer > div {
+
+	margin-right: 5em;
+
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.LandingContainer div h1 {
+	line-height: 1.5em;
+	text-transform: uppercase;
+
+	margin-bottom: 1em;
+} 
+.LandingContainer div p {
+	font-size: 1.5em;
+	line-height: 2em;
+}
+.LandingContainer div a {
+	background-color: var(--color-black);
+
+	text-decoration: none;
+	font-size: 1.5em;
+	text-transform: uppercase;
+
+	width: 50%;
+
+	padding: .5em;
+	margin: 1em auto;
+
+	border-radius: .15em;
+
+	transition: .5s all;
+}
+
+.LandingContainer div a:hover {
+	filter: opacity(60%);
+}

@@ -1,0 +1,25 @@
+.HeaderContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	border-bottom: .1em solid var(--color-gray);
+
+	padding: 1em 0;
+}
+.HeaderContainer a { text-decoration: none; }
+.HeaderContainer > a {
+	margin-left: 2em;
+	font-size: 2.5em;
+}
+
+.nav a {
+	font-size: 1.5em;
+	margin-right: 2em;
+
+	transition: .2s all;
+}
+.nav a:hover {
+	border-bottom: .1em solid;
+}
