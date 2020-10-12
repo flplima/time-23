@@ -11,7 +11,13 @@ export const Container = styled.div`
 	background-size: cover;
 	background-position: center;
 
-  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+
+
+  main {
+    overflow: auto;
+  }
 
   padding-top: 1em;
 `
