@@ -31,3 +31,7 @@ cd whatsapp
 yarn
 yarn start
 ```
+
+Acesse http://localhost:3000 para o site e http://localhost:3001 para o whatsapp.
+
+A api estará funcionando na porta 3002.
