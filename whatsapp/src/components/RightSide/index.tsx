@@ -47,9 +47,7 @@ const RightSide: React.FC = () => {
 					);
 				})}
 			</main>
-
 			<MessageInput handleChange={handleChange} onClick={handleSubmit} value={newMessage} />
-
 		</Container>
 	);
 };
