@@ -19,7 +19,7 @@ export class CoreService implements OnApplicationBootstrap {
   async train() {
     const products = await this.productsService.find();
     for (const product of products) {
-      this.nlpService.addNamedEntity('produto', product.name, product.synonyms);
+      this.nlpService.addNamedEntity('produto', product.name, [product.name]);
     }
 
     // Adicionar frases
@@ -29,8 +29,8 @@ export class CoreService implements OnApplicationBootstrap {
     await this.nlpService.train();
 
     // Testes
-    // const a = await this.nlpService.process('eu quero comprar duas bolachas');
-    // console.log(a);
+    const a = await this.nlpService.process('eu quero comprar um arroz');
+    console.log(a);
   }
 
   async process(text: string): Promise<string> {

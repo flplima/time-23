@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { CoreService } from 'src/core/core.service';
 import { ProductsService } from './products.service';
 
@@ -8,6 +8,11 @@ export class ProductsController {
     private productsService: ProductsService,
     private coreService: CoreService,
   ) {}
+  
+  @Get()
+  find() {
+    return this.productsService.find();
+  }
 
   @Post()
   async create(

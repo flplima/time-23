@@ -1,36 +1,50 @@
-import Link from "next/link";
+import { useRouter } from 'next/router';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+
 import styles from "../../styles/Login.module.css";
 
-export default function Login() {
+
+export default function Register() {
+	const router = useRouter();
+	const form = useForm();
+
+	const onSubmitForm = async (data) => {
+		const res = await axios.post('http://localhost:3002/users/', data);
+		router.push('/admin');
+	}
+
 	return (
 		<div id="register" className={styles.LoginContainer}>
 			<h1>Cadastro</h1>
 
-			<div className={styles.inputBlock}>
-			<label htmlFor="email">Digite seu nome:</label>
-				<input type="email" name="name" placeholder="Pedro" />
-			</div>
+			<form>
+				{!!Object.keys(form.errors || {}).length && (
+					<p style={{ color: 'black', fontWeight: 'bold' }}>Preencha todos os campos</p>
+				)}
 
-			<div className={styles.inputBlock}>
-			<label htmlFor="email">Digite seu email:</label>
-				<input type="email" name="email" placeholder="email@dominio.com" />
-			</div>
+				<div className={styles.inputBlock}>
+					<label htmlFor="email">Digite seu nome:</label>
+					<input type="email" name="name" placeholder="Pedro" ref={form.register({ required: true })} />
+				</div>
 
-			<div className={styles.inputBlock}>
-				<label htmlFor="password">Digite sua senha:</label>
-				<input type="password" name="password" placeholder="senha" />
-			</div>
+				<div className={styles.inputBlock}>
+					<label htmlFor="email">Digite seu email:</label>
+					<input type="email" name="email" placeholder="email@dominio.com" ref={form.register({ required: true })} />
+				</div>
 
-			<div className={styles.inputBlock}>
-				<label htmlFor="password">Digite sua senha novamente:</label>
-				<input type="password" name="password" placeholder="senha" />
-			</div>
+				<div className={styles.inputBlock}>
+					<label htmlFor="email">Nome do seu negócio:</label>
+					<input type="email" name="companyName" placeholder="Meu comércio" ref={form.register({ required: true })} />
+				</div>
 
-			<Link href="/">Cadastrar</Link>
-			<span>
-				Já possui uma conta?
-				<Link href="#login">Faça seu Login</Link>
-			</span>
+				<div className={styles.inputBlock}>
+					<label htmlFor="email">Descrição do seu negócio:</label>
+					<input type="email" name="companyDescription" placeholder="Somos uma loja que vende de tudo" ref={form.register({ required: true })} />
+				</div>
+
+				<button onClick={form.handleSubmit(onSubmitForm)}>Cadastrar</button>
+			</form>
 		</div>
 	);
 }
