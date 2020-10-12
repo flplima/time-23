@@ -6,18 +6,15 @@ export default function landing() {
 		<div id="home" className={styles.LandingContainer} >
 
 			<div>
-				<h1>As suas dores de cabeça com vendas online terminaram!</h1>
+				<h1>O atendimento de pedidos via WhatsApp está te tomando muito tempo?</h1>
 				<p>
 					Apresentamos a você a Getúlia: <br />
-					a solução prática que irá otimizar
-					seu tempo e economizar os gastos
-					financeiros sem a necessidade de
-					instalar nenhum aplicativo.
+					Uma atendente virtual personalizada para o seu negócio.
 				</p>
-				<Link href="#about"> Veja Mais </Link>
+				<Link href="#register">Cadastre-se agora</Link>
 			</div>
 
-			<img src="" alt="" />
+			<img src="/print.png" alt="print do whatsapp" />
 
 		</div>
 	);

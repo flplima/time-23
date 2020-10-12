@@ -22,24 +22,23 @@ export class CoreService implements OnApplicationBootstrap {
       this.nlpService.addNamedEntity('produto', product.name, [product.name]);
     }
 
-    // Adicionar frases
-    this.nlpService.addDocument('Quero comprar %produto%', 'comprar');
+    this.nlpService.addDocument('Quero comprar %produto%', 'buy');
+    this.nlpService.addDocument('comprar %produto%', 'buy');
+    this.nlpService.addDocument('Quero %produto%', 'buy');
+    this.nlpService.addDocument('Adicione %produto%', 'buy');
+    this.nlpService.addDocument('Adicionar %produto%', 'buy');
+
+    this.nlpService.addDocument('Finalizar pedido', 'finish');
+    this.nlpService.addDocument('Só isso mesmo', 'finish');
 
     // Treinar o algoritmo
     await this.nlpService.train();
 
-    // Testes
-    const a = await this.nlpService.process('eu quero comprar um arroz');
-    console.log(a);
   }
 
-  async process(text: string): Promise<string> {
+  async process(text: string) {
     const result = await this.nlpService.process(text);
-    const { entities } = result;
-    const qtd = entities.find(item => item.entity === 'number')?.resolution?.value || 1; 
-    console.log(result);
-    const product = entities.find(item => item.entity === 'produto')?.option || '???';
-    return `OK. Entendi que você quer comprar ${qtd} unidade${qtd > 1 ? 's' : ''} do produto ${product}.`;
+    return result;
   }
   
   dontKnowWhatToSay(text: string) {

@@ -42,7 +42,7 @@ const RightSide: React.FC = () => {
 							isMe={message.fromUser}
 							message={message.text}
 							time={'00:00'}
-							name={'Getúlia'}
+							name={'Mercadinho da Ana - Getúlia'}
 						/>
 					);
 				})}

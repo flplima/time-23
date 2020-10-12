@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 
 import styles from "../../styles/Login.module.css";
 
@@ -43,7 +44,9 @@ export default function Register() {
 					<input type="email" name="companyDescription" placeholder="Somos uma loja que vende de tudo" ref={form.register({ required: true })} />
 				</div>
 
-				<button onClick={form.handleSubmit(onSubmitForm)}>Cadastrar</button>
+				<p style={{ textAlign: 'center', marginTop: 16 }}>
+					<Button variant='dark' size='lg' onClick={form.handleSubmit(onSubmitForm)}>Cadastrar</Button>
+				</p>
 			</form>
 		</div>
 	);

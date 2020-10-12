@@ -10,7 +10,6 @@ export default function header() {
 				<Link href="#home" > Início </Link>
 				<Link href="#about" > Sobre </Link>
 				<Link href="#benefits" > Benefícios </Link>
-				<Link href="#contact-us" > Fale Conosco </Link>
 				<Link href="/admin" > Portal do Cliente </Link>
 			</nav>
 		</header>

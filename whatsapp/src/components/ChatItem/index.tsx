@@ -11,12 +11,12 @@ const ChatItem: React.FC = () => {
 
       <Chats>
         <ChatLine>
-          <Name>Getúlia</Name>
+          <Name>Mercadinho da Ana</Name>
           <Date>19:00</Date>
         </ChatLine>
 
         <LastMessage>
-          <p>Olá, sou a Getúlia</p>
+          <p>Produtos de qualidade</p>
         </LastMessage>
       </Chats>
     </Container>

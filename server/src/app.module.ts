@@ -9,7 +9,7 @@ import { UsersModule } from './users/users.module';
   imports: [
     MongooseModule.forRootAsync({
       useFactory: () => ({
-        uri: process.env.MONGO_URI || 'mongodb://localhost/db'
+        uri: process.env.MONGO_URI || 'mongodb://localhost/getulia'
       }),
     }),
     CoreModule.register({

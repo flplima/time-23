@@ -11,7 +11,7 @@ import {
   ChatList,
 } from "./styles";
 
-import getuliaLogo from '../../assets/getulia-logo.png';
+import src from '../../assets/morgan.webp';
 
 import ChatItem from "../ChatItem";
 
@@ -19,7 +19,7 @@ const LeftSide: React.FC = () => {
   return (
     <Container>
       <Header>
-        <img src={getuliaLogo} alt="Profile" />
+        <img src={src} alt="Profile" />
         <div>
           <StatusIcon />
           <div className="online" />
